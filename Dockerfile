@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:alpine
 WORKDIR /etc/nginx
 RUN rm -v nginx.conf
 COPY nginx.conf nginx.conf
