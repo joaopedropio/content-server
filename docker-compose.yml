@@ -9,7 +9,7 @@ services:
       - CONTENT_PATH=/wwwroot
       - CONTENT_AUTH_URL=http://content_authorizator
     volumes:
-      - /home/joao/wwwroot:/wwwroot
+      - /home/wwwroot:/wwwroot
     networks:
       - content_network
 
