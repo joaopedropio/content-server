@@ -1,0 +1,3 @@
+#!/bin/bash
+
+envsubst \$NGINX_PORT\$CONTENT_PATH\$CONTENT_AUTH_URL < fdpdocaralho > nginx.conf && exec nginx -g 'daemon off;' 
