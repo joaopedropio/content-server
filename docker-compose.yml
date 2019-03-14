@@ -3,11 +3,11 @@ services:
   content_server:
     build: .
     ports:
-      - "22:22"
+      - "2222:22"
       - "4000:80"
     environment:
       - NGINX_PORT=80
-      - CONTENT_PATH=/wwwroot
+      - CONTENT_PATH=/content
       - CONTENT_AUTH_URL=http://content_authorizator
       - USER_NAME=content
       - USER_PASSWORD=password
