@@ -1,4 +1,0 @@
-Subsystem sftp internal-sftp
-Match Group sftpusers
-ChrootDirectory /data/%u
-ForceCommand internal-sftp
