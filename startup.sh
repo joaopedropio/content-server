@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# check if startup.sh has already run
+if [ -f "/executed" ]
+then
+    echo "Script has already run"
+    /usr/bin/supervisord -c /etc/supervisord.conf
+    exit 0
+fi
+
+# start execution
+echo "Running for the first time"
+touch /executed
+
 # setup user
 USER_PASSWORD_HASH="$(openssl passwd -1 $USER_PASSWORD)"
 mkdir /content
